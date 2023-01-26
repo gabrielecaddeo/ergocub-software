@@ -1161,6 +1161,37 @@
   </joint>
   <link name="r_hand_thumb_3">
     <inertial>
+      <origin xyz="0 0 0.0015" rpy="0 0 0"/>
+      <mass value="0.00811336"/>
+      <inertia ixx="0.01" ixy="6.72467e-07" ixz="3.3847e-07" iyy="0.01" iyz="-6.23617e-07" izz="0.01"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ergoCub/meshes/simmechanics/digit.STL" scale="1 1 1"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ergoCub/meshes/simmechanics/digit.STL" scale="1 1 1"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="r_thumb_dist" type="revolute">
+    <origin xyz="0.019999518753341633 -0.0014995177497797996 -3.909354686637556e-07" rpy="-1.57 0 -1.57"/>
+    <axis xyz="2.036798052024169e-07 1.5008516943137984e-07 -1.000000226690442"/>
+    <parent link="r_hand_thumb_2"/>
+    <child link="r_hand_thumb_3"/>
+    <limit effort="50000" lower="0.0" upper="2.792526803190927" velocity="120.0"/>
+    <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <!--
+  <link name="r_hand_thumb_3">
+    <inertial>
       <origin xyz="0.006464178605992216 0.001884904152624961 1.5404066026875052e-05" rpy="-1.3050072033505575 0.9949590577630557 0.6894456200851217"/>
       <mass value="0.00811336"/>
       <inertia ixx="0.01" ixy="6.72467e-07" ixz="3.3847e-07" iyy="0.01" iyz="-6.23617e-07" izz="0.01"/>
@@ -1189,6 +1220,7 @@
     <limit effort="50000" lower="0.0" upper="2.792526803190927" velocity="120.0"/>
     <dynamics damping="2.0" friction="0.0"/>
   </joint>
+  -->
   <link name="r_hand_thumb_skin_0"/>
   <joint name="r_hand_thumb_skin_0_fixed_joint" type="fixed">
     <origin xyz="0.020306533907145166 -0.0024343057730962236 1.0397284419816355e-06" rpy="1.5707964766707783 0 -0.3483080823075038"/>
@@ -1305,6 +1337,37 @@
   </joint>
   <link name="r_hand_middle_2">
     <inertial>
+      <origin xyz="0 0 0.0015" rpy="0 0 0"/>
+      <mass value="0.00912524"/>
+      <inertia ixx="0.01" ixy="-1.25412e-07" ixz="-8.73252e-07" iyy="0.01" iyz="-4.04969e-07" izz="0.01"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ergoCub/meshes/simmechanics/digit.STL" scale="1 1 1"/>
+      </geometry>
+      <material name="dgreen">
+        <color rgba="0.1 0.8 0.1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ergoCub/meshes/simmechanics/digit.STL" scale="1 1 1"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="r_middle_dist" type="revolute">
+    <origin xyz="1.3550151000546462e-07 -0.0014995238274964628 -0.03000020325318492" rpy="3.14 0 -1.57"/>
+    <axis xyz="-0.9999998262417538 9.878318872787173e-08 2.5044776373606137e-07"/>
+    <parent link="r_hand_middle_1"/>
+    <child link="r_hand_middle_2"/>
+    <limit effort="50000" lower="0.0" upper="2.792526803190927" velocity="120.0"/>
+    <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <!--
+  <link name="r_hand_middle_2">
+    <inertial>
       <origin xyz="5.143109505646379e-05 0.0015994843505622303 -0.0035910973065023666" rpy="0.11954926259843997 -0.22799029281164018 -1.8531928341958708"/>
       <mass value="0.00912524"/>
       <inertia ixx="0.01" ixy="-1.25412e-07" ixz="-8.73252e-07" iyy="0.01" iyz="-4.04969e-07" izz="0.01"/>
@@ -1333,6 +1396,7 @@
     <limit effort="50000" lower="0.0" upper="2.792526803190927" velocity="120.0"/>
     <dynamics damping="2.0" friction="0.0"/>
   </joint>
+  -->
   <link name="r_hand_middle_skin_0"/>
   <joint name="r_hand_middle_skin_0_fixed_joint" type="fixed">
     <origin xyz="0 -0.0024341633880323454 -0.02140626784029226" rpy="-2.888002141897799e-07 1.2224888157071614 -1.5707967443194422"/>
@@ -1621,6 +1685,37 @@
     <limit effort="50000" lower="0.0" upper="2.792526803190927" velocity="120.0"/>
     <dynamics damping="2.0" friction="0.0"/>
   </joint>
+<link name="r_hand_index_3">
+    <inertial>
+      <origin xyz="0 0 0.0015" rpy="0 0 0"/>
+      <mass value="0.00912524"/>
+      <inertia ixx="0.01" ixy="-1.86597e-07" ixz="-7.96957e-07" iyy="0.01" iyz="-6.51325e-07" izz="0.01"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ergoCub/meshes/simmechanics/digit.STL" scale="1 1 1"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0 0 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ergoCub/meshes/simmechanics/digit.STL" scale="1 1 1"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="r_index_dist" type="revolute">
+    <origin xyz="0 -0.0014998229561488108 -0.030000484918389303" rpy="3.14 0 -1.57"/>
+    <axis xyz="-0.9999995872902697 -2.6872936789712476e-07 4.668360350512657e-07"/>
+    <parent link="r_hand_index_2"/>
+    <child link="r_hand_index_3"/>
+    <limit effort="50000" lower="0.0" upper="2.792526803190927" velocity="120.0"/>
+    <dynamics damping="2.0" friction="0.0"/>
+  </joint>
+  <!--
   <link name="r_hand_index_3">
     <inertial>
       <origin xyz="4.527854646488999e-05 0.0015998591566379061 -0.003590752919953033" rpy="0.20567444929844825 -0.20467244819585653 -1.8717733650332327"/>
@@ -1643,6 +1738,7 @@
       </geometry>
     </collision>
   </link>
+  
   <joint name="r_index_dist" type="revolute">
     <origin xyz="0 -0.0014998229561488108 -0.030000484918389303" rpy="0 0 0"/>
     <axis xyz="-0.9999995872902697 -2.6872936789712476e-07 4.668360350512657e-07"/>
@@ -1651,6 +1747,7 @@
     <limit effort="50000" lower="0.0" upper="2.792526803190927" velocity="120.0"/>
     <dynamics damping="2.0" friction="0.0"/>
   </joint>
+  -->
   <link name="r_hand_index_skin_0"/>
   <joint name="r_hand_index_skin_0_fixed_joint" type="fixed">
     <origin xyz="6.083293345379714e-07 -0.0024337142786424737 -0.02140564618132018" rpy="-1.358973927973795e-06 1.2224885677301185 -1.5707970308820571"/>
@@ -3209,6 +3306,7 @@
     <parent link="realsense"/>
     <origin rpy="-1.5707962931078618 8.881784197001252e-16 -1.5707963267948954" xyz="0.00751550026595621 0.010000000000000005 -4.911144457775407e-08"/>
   </sensor>
+  <!--
   <gazebo reference="head">
     <sensor name="lasersensor_head" type="ray">
       <always_on>1</always_on>
@@ -3241,7 +3339,8 @@
   <yarpConfigurationFile>model://ergoCub/conf/sensors/gazebo_ergocub_lidar.ini</yarpConfigurationFile>
 </plugin>
     </sensor>
-  </gazebo>
+  </gazebo> -->
+  
   <sensor name="lasersensor_head" type="ray">
     <parent link="head"/>
     <origin rpy="0.0 -0.0 1.5707963267948966" xyz="4.99999999999997e-05 0.0 0.13480199999999992"/>
